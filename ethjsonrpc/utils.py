@@ -15,8 +15,9 @@ def clean_hex(d):
     '''
     return hex(d).rstrip('L')
 
+
 def validate_block(block):
-    if isinstance(block, basestring):
+    if isinstance(block, str):
         if block not in BLOCK_TAGS:
             raise ValueError('invalid block tag')
     if isinstance(block, int):
